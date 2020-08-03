@@ -1,0 +1,3 @@
+---
+# vars file for ansible-role-codium
+gpg_fingerprint: '1302DE60231889FE1EBACADC54678CF75A278D9C'
