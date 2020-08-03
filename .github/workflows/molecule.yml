@@ -43,4 +43,3 @@ jobs:
         with:
           image: "${{ matrix.image }}"
           options: parallel
-          scenario: my_specific_scenario
