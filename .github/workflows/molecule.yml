@@ -30,9 +30,7 @@ jobs:
       matrix:
         config:
           - image: "ubuntu1804"
-            namespace: "geerlingguy"
           - image: "centos7"
-            namespace: "geerlingguy"
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -41,6 +39,6 @@ jobs:
       - name: molecule
         uses: robertdebock/molecule-action@2.6.1
         with:
-          image: "${{ matrix.image }}"
-          namespace: "${{ matrix.namespace }}"
+          image: "${{ matrix.config.image }}"
+          namespace: "geerlingguy"
           options: parallel
