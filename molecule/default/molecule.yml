@@ -8,15 +8,7 @@ lint: |
   yamllint .
   ansible-lint .
 platforms:
-  - name: instance
-    image: "geerlingguy/docker-${MOLECULE_DISTRO:-centos7}-ansible:latest"
-    command: ""
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    privileged: true
-    pre_build_image: true
-
-  - name: "bootstrap-${image:-fedora}-${tag:-latest}"
+  - name: "${image:-centos7}"
     image: "${namespace:-geerlingguy}/${image:-centos7}:${tag:-latest}"
     command: ""
     volumes:
