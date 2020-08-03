@@ -29,10 +29,8 @@ jobs:
     strategy:
       matrix:
         config:
-          - image: "docker-ubuntu1804-ansible"
-            namespace: "geerlingguy"
-          - image: "docker-centos7-ansible"
-            namespace: "geerlingguy"
+          - image: "ubuntu1804"
+          - image: "centos7"
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -41,5 +39,6 @@ jobs:
       - name: molecule
         uses: robertdebock/molecule-action@2.6.1
         with:
-          image: "${{ matrix.image }}"
+          image: "${{ matrix.config.image }}"
+          namespace: "geerlingguy"
           options: parallel
