@@ -29,9 +29,9 @@ jobs:
     strategy:
       matrix:
         config:
-          - image: "docker-ubuntu1804-ansible"
+          - image: "ubuntu1804"
             namespace: "geerlingguy"
-          - image: "docker-centos7-ansible"
+          - image: "centos7"
             namespace: "geerlingguy"
     steps:
       - name: checkout
