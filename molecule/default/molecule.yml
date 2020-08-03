@@ -9,7 +9,7 @@ lint: |
   ansible-lint .
 platforms:
   - name: "${image:-centos7}"
-    image: "${namespace:-geerlingguy}/${image:-centos7}:${tag:-latest}"
+    image: "${namespace:-geerlingguy}/docker-${image:-centos7}-ansible:${tag:-latest}"
     command: ""
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
