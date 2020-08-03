@@ -15,6 +15,15 @@ platforms:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
     pre_build_image: true
+
+  - name: "bootstrap-${image:-fedora}-${tag:-latest}"
+    image: "${namespace:-geerlingguy}/${image:-centos7}:${tag:-latest}"
+    command: ""
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: yes
+    pre_build_image: yes
+
 provisioner:
   name: ansible
 verifier:
