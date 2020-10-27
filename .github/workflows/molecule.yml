@@ -29,8 +29,12 @@ jobs:
     strategy:
       matrix:
         config:
-          - image: "ubuntu1804"
           - image: "centos7"
+          - image: "centos8"
+          - image: "ubuntu1804"
+          - image: "ubuntu2004"
+          - image: "debian10"
+          
     steps:
       - name: checkout
         uses: actions/checkout@v2

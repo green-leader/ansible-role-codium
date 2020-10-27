@@ -4,7 +4,9 @@
   tasks:
     - name: install gpg-agent
       apt:
-        name: gpg-agent
+        name:
+          - gpg-agent
+          - gpg
         update_cache: yes
         install_recommends: no
         state: present
