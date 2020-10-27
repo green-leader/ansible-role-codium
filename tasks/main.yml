@@ -12,7 +12,7 @@
   yum_repository:
     name: codium
     description: gitlab.com_paulcarroty_vscodium_repo
-    baseurl: https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/rpms/
+    baseurl: https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/
     enabled: yes
     gpgkey: https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
     gpgcheck: yes
@@ -31,9 +31,10 @@
 
 - name: Ensure repo is installed (Debian)
   apt_repository:
-    repo: "deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main"
+    repo: "deb https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/ vscodium main"
     filename: codium
     state: present
+    update_cache: yes
   when:
     - ansible_os_family == 'Debian'
 
