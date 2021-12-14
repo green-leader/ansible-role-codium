@@ -35,7 +35,6 @@ jobs:
           - image: "ubuntu2004"
           - image: "debian10"
           - image: "debian11"
-          - image: "rockylinux8"
           
     steps:
       - name: checkout
