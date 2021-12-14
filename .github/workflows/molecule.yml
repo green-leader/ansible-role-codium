@@ -34,6 +34,7 @@ jobs:
           - image: "ubuntu1804"
           - image: "ubuntu2004"
           - image: "debian10"
+          - image: "debian11"
           
     steps:
       - name: checkout
