@@ -1,7 +1,7 @@
 Role Name
 =========
 
-Install Codium a community-driven, freely-licensed binary distribution of Microsoft’s editor VSCode.
+Install [Codium](https://vscodium.com/) a community-driven, freely-licensed binary distribution of Microsoft’s editor VSCode.
 
 Requirements
 ------------
@@ -21,9 +21,11 @@ None
 Example Playbook
 ----------------
 
+```yml
     - hosts: workstations
       roles:
-         - { role: greenleader.codium, become: yes }
+         - { role: green_leader.codium, become: yes }
+```
 
 License
 -------
