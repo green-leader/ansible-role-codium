@@ -10,7 +10,7 @@ name: Release
 
 defaults:
   run:
-    working-directory: 'greenleader.codium'
+    working-directory: 'green_leader.codium'
 
 jobs:
 
