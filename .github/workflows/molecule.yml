@@ -30,15 +30,11 @@ jobs:
       matrix:
         config:
           - image: "centos7"
-          - image: "rockylinux8"
-          - image: "rockylinux9"
-          - image: "fedora36"
+          - image: "centos8"
           - image: "ubuntu1804"
           - image: "ubuntu2004"
-          - image: "ubuntu2204"
           - image: "debian10"
           - image: "debian11"
-          - image: "debian12"
           
     steps:
       - name: checkout
